@@ -1,0 +1,14 @@
+# requirements.txt (place in my_music_etl_project/docker/)
+
+# Core Airflow package
+apache-airflow
+
+# Airflow providers for AWS services (S3, Redshift)
+apache-airflow-providers-amazon
+apache-airflow-providers-postgres
+
+# Data processing libraries
+pandas
+boto3
+pyarrow
+psycopg2-binary
