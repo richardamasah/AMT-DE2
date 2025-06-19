@@ -12,7 +12,7 @@ This project implements an end-to-end ETL pipeline for a music streaming service
 
 The pipeline processes streaming events, user data, and song metadata to compute business-critical KPIs like **top artists per hour**, **track diversity index**, and **genre-level popularity**.
 
-![ETL Architecture](images/Architectural.jpeg)
+![ETL Architecture](images/Architectural1.jpeg)
 ---
 
 ## 🧠 Key Components
