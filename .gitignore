@@ -1,1 +1,6 @@
 .env
+local-test/
+test.ipynb
+venv/
+lab1mwaa/
+data/
