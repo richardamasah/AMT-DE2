@@ -44,7 +44,8 @@ try:
     genre_kpis.write.mode("overwrite").parquet(output_base + "genre_daily_stats/")
     print("[OK] Genre KPIs written to genre_daily_stats/")
 
-    # ========== 🏆 2. Top 3 Songs per Genre per Day ==========
+
+    # ========== 🏆 2. Top 3 Songs per Genre per Day ===========
     print("[INFO] Calculating top 3 songs per genre per day...")
 
     song_play_counts = df.groupBy("date", "track_genre", "track_name") \
