@@ -145,4 +145,4 @@ for table_name, meta in tables.items():
     except Exception as e:
         print(f"[FATAL ERROR] Could not process {table_name}: {str(e)}")
 
-print("\n✅ [COMPLETE] All KPI tables processed.")
+print("\n✅ [COMPLETE] All KPI tables processed..")
