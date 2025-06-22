@@ -19,29 +19,29 @@ with DAG(
     tags=['music', 'kpi', 'dynamo'],
 ) as dag:
 
-    glue_etl = GlueJobOperator(
+    Ingestion_n_validation = GlueJobOperator(
         task_id='run_glue_etl_transform',
-        job_name='job_etl_transform',
+        job_name='Data-validation-job',
         script_location='s3://your-bucket/scripts/job1_etl.py',  # optional if Glue handles it
         aws_conn_id='aws_default',
         region_name='us-east-1',
         dag=dag
     )
 
-    glue_kpi = GlueJobOperator(
+    kpi_computation = GlueJobOperator(
         task_id='run_glue_kpi_compute',
-        job_name='job_kpi_compute',
+        job_name='kpi_computation_job',
         aws_conn_id='aws_default',
         region_name='us-east-1',
         dag=dag
     )
 
-    glue_load_dynamo = GlueJobOperator(
+    load_dynamo = GlueJobOperator(
         task_id='run_kpi_to_dynamo',
-        job_name='job_load_to_dynamo',
+        job_name='load-to-dynamo',
         aws_conn_id='aws_default',
         region_name='us-east-1',
         dag=dag
     )
 
-    glue_etl >> glue_kpi >> glue_load_dynamo
+    Ingestion_n_validation >> kpi_computation >> load_dynamo
