@@ -19,8 +19,8 @@ job = Job(glueContext)
 job.init(args['JOB_NAME'], args)
 
 # Paths
-input_path = "s3://lab3dynamo/validated/"
-output_base = "s3://lab3dynamo/processed/kpis/"
+input_path = "s3://lab3dynamo1/validated/"
+output_base = "s3://lab3dynamo1/processed/kpis/"
 
 try:
     print("[INFO] Reading validated stream data...")
