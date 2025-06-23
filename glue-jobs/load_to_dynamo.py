@@ -17,7 +17,7 @@ import os, glob, subprocess
 from decimal import Decimal
 
 # Base S3 folder for KPIs and local scratch directory
-s3_base = "s3://lab3dynamo/processed/kpis/"
+s3_base = "s3://lab3dynamo1/processed/kpis/"
 local_base = "/tmp/kpi_data"
 
 # Table-to-folder mapping with their handling functions
