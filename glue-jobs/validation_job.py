@@ -26,8 +26,8 @@ job.init(args['JOB_NAME'], args)
 
 # Config
 database_name = "lab3"
-validated_path = "s3://lab3dynamo/validated"
-bad_base_path = "s3://lab3dynamo/bad-records"
+validated_path = "s3://lab3dynamo1/validated"
+bad_base_path = "s3://lab3dynamo1/bad-records"
 
 # Required schemas
 required_users = {'user_id', 'user_name', 'user_age', 'user_country', 'created_at'}
